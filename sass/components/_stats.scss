@@ -1,0 +1,32 @@
+.stats {
+    margin: 8rem auto;
+    max-width: 120rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+
+    @include responsive(xs) { //this is 576px;
+        flex-direction: column;
+    }
+
+    &__info {
+        flex: 0 0 33.3333%;
+    }
+    
+    &__count {
+        font-size: 6rem;
+        font-weight: 700;
+        color: #fff;
+        text-align: center;
+    }
+    
+    &__label {
+        font-size: 1.8rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        color: #fff;
+        text-align: center;
+    }
+}

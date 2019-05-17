@@ -1,0 +1,40 @@
+.agent {
+    max-width: 120rem;
+    margin: 0 auto;
+    margin-top: 2rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    @include responsive(xs) { //this is 576px;
+        flex-direction: column;
+    }
+
+    &__container {
+        height: 5rem;
+        margin-bottom: 2rem;
+        flex: 0 0 20%;
+    }
+
+    &__link {
+        height: 100%;
+        width: 100%;
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__img {
+        height: 100%;
+        width: auto;
+        transition: filter .3s;
+        filter: grayscale(100%);
+
+        &:hover {
+            filter: grayscale(0%);
+        }
+    }
+}

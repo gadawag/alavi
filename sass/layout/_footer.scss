@@ -1,0 +1,135 @@
+.footer {
+    background-color: $dark-gray;
+    position: relative;
+    height: 15rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @include responsive(lg) { //this is 1200px < ;
+        align-items: flex-end;
+        padding: 0 1rem;
+    }
+
+    &__social {
+        margin: 2rem 0;
+        width: 20%;
+
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+
+        @include responsive(lg) { //this is 1200px < ;
+            width: 30%;
+        }
+    
+        @include responsive(md) { //this is 992px;
+            width: 50%;
+        }
+
+        @include responsive(sm) { //this is 768px;
+            font-size: 50%;
+        }
+
+        &-link:visited, &-link:link {
+            text-decoration: none;
+            background-color: $color-secondary;
+            border-radius: 50%;
+            width: 4rem;
+            height: 4rem;
+            transition: all .2s;
+    
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &-link:hover {
+            background-color: #fff;
+        }
+
+        &-link:hover &-icon {
+            color: $color-secondary;
+        }
+
+        &-icon {
+            font-size: 2rem;
+            color: #fff;
+            transition: all .2s;
+        }
+    }
+
+    &__copyright {
+        font-size: 1.6rem;
+        font-weight: 400;
+        text-transform: capitalize;
+        color: #fff;
+
+        @include responsive(xs) { //this is 576px;
+            font-size: 1.2rem;
+        }
+    }
+
+    &__triangle {
+        background-color: $color-secondary;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 35rem;
+        height: 35rem;
+        clip-path: polygon(0 0, 0% 100%, 100% 100%);
+    
+        @include responsive(lg) { //this is 1200px < ;
+            width: 30rem;
+            height: 30rem;
+        }
+    
+        @include responsive(md) { //this is 992px;
+            width: 25rem;
+            height: 25rem;
+        }
+    }
+
+    &__line {
+        width: 40rem;
+        height: 1px;
+        background-color: $color-secondary;
+        position: absolute;
+        top: -22rem;
+        left: 0;
+        transform: rotate(45deg);
+        transform-origin: left;
+
+        @include responsive(lg) { //this is 1200px < ;
+            top: -16rem;
+            width: 30rem;
+        }
+    
+        @include responsive(md) { //this is 992px;
+            top: -11rem;
+            width: 25rem;
+        }
+    }
+
+    &__img {
+        position: absolute;
+        height: 80%;
+        width: auto;
+        top: 0;
+        left: 3rem;
+
+        @include responsive(lg) { //this is 1200px < ;
+            height: 70%;
+            left: 2rem;
+            top: 2rem;
+        }
+    
+        @include responsive(md) { //this is 992px;
+            height: 60%;
+            left: 1rem;
+        }
+    }
+}

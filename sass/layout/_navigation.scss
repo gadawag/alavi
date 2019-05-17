@@ -1,0 +1,152 @@
+.nav {
+    // border: 1px solid red;
+
+    background-color: $color-trans-blue;
+    position: fixed;
+    width: 100%;
+    height: 8rem;
+    z-index: 1000;
+
+    display: flex;
+    justify-content: flex-end;
+
+    &__logo {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 18%;
+
+        @include responsive(md) { //this is 992px;
+            width: 25%;
+        }
+
+        @include responsive(xs) { //this is 576px;
+            width: 40%
+        }
+    }
+
+    &__content {
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-end;
+        flex-direction: column;
+
+        flex: 0 0 100%;
+        position: relative;
+    }
+
+    &__button {
+        height: 5rem;
+        width: 5rem;
+        border: 2px solid #fff;
+        padding: 0 .5rem;
+        position: absolute;
+        right: 1rem;
+        cursor: pointer;
+        
+        display: none;
+        align-items: center;
+
+    
+        @include responsive(md) { //this is 992px;
+            display: flex;
+        }
+    }
+
+    &__icon {
+        background-color: #fff;
+        border-radius: 3px;
+        height: 3px;
+        position: relative;
+        flex: 1;
+
+        &:before, &:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #fff;
+        }
+
+        &:before {
+            top: -1rem;
+        }
+
+        &:after {
+            top: 1rem;
+        }
+    }
+
+    &__details-list {
+        list-style-type: none;
+        margin-right: 4rem;
+
+        display: flex;
+
+        @include responsive(md) { //this is 992px;
+            display: none;
+        }
+
+        &-item {
+            font-size: 1.4rem;
+            color: #fff;
+
+            &:not(:last-child) {
+                margin-right: 3rem;
+            }
+        }
+    }
+
+    &__list {
+        list-style-type: none;
+        margin-right: 4rem;
+        
+        display: flex;
+        align-items: center;
+
+        @include responsive(md) { //this is 992px;
+            display: none;
+        }
+
+        &-item {
+
+            &:not(:last-child) {
+                margin-right: 1rem;
+            }
+
+            &-link:link, &-link:visited {
+                font-size: 1.2rem;
+                font-weight: 600;
+                text-transform: uppercase;
+                text-decoration: none;
+                color: #fff;
+                padding: .5rem;
+                position: relative;
+                transition: color .2s;
+            }
+
+            &-link:after {
+                content: '';
+                background-color: #fff;
+                position: absolute;
+                width: 100%;
+                height: 2px;
+                bottom: -1rem;
+                left: 0;
+                opacity: 0;
+                transition: all .2s;
+            }
+
+            &-link:hover {
+                color: $color-secondary;
+            }
+
+            &-link:hover:after {
+                bottom: -.3rem;
+                background-color: $color-secondary;
+                opacity: 1;
+            }
+        }
+    }
+}

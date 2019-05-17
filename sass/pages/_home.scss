@@ -1,0 +1,405 @@
+.chayan {
+    background-image: linear-gradient(to right bottom, rgba(255, 255, 255, .1), rgba(255, 255, 255, .1)), url('../img/h_section_2.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center right;
+    position: relative;
+
+    display: flex;
+    justify-content: space-around;
+
+    @include responsive(md) { //this is 992px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+
+        padding: 5rem;
+    }
+
+    &__img-wrap {
+        margin-top: -6%;
+        margin-bottom: -1.8%;
+
+        flex: 0 0 25%;
+    
+        @include responsive(md) { //this is 992px;
+            margin-top: 0;
+            margin-bottom: 0;
+            max-width: 25rem;
+        }
+    }
+
+    &__img {
+        width: 100%;
+        height: 100%;
+    }
+
+    &__details {
+        align-self: center;
+        flex: 0 0 40%;
+    
+        @include responsive(lg) { //this is 1200px < ;
+            flex: 0 0 60%;
+        }
+    }
+
+    &__quote {
+        font-size: 1.4rem;
+        font-weight: 500;
+        color: $color-secondary;
+    }
+
+    &__more {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin-top: 4rem;
+    
+        @include responsive(md) { //this is 992px;
+            justify-content: center;
+        }
+    
+        @include responsive(xs) { //this is 576px;
+            flex-direction: column;
+        }
+    }
+
+    &__signature {
+        margin-left: 4rem;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    
+        @include responsive(xs) { //this is 576px;
+            margin: 0;
+            margin-bottom: 1rem;
+            order: -1;
+        }
+    }
+
+    &__signature-img-wrap {
+        flex: 0 0 100%;
+    }
+
+    &__signature-img {
+        width: 100%;
+        height: 100%;
+    }
+
+    &__title {
+        color: $color-secondary;
+        font-size: 1.2rem;
+        font-weight: 600;
+    }
+}
+
+.welcome {
+    background-image: url('../img/h_banner_3.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+
+    display: flex;
+
+    @include responsive(md) { //this is 992px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    @include responsive(sm) { //this is 768px;
+        background-position: left;
+    }
+
+    &:before {
+        content: '';
+        float: left;
+        padding-top: 30%;
+        
+        @include responsive(md) { //this is 992px;
+            padding: 0;
+        }
+    }
+
+    &__heading {
+        align-self: center;
+        flex: 0 0 50%;
+
+        display: flex;
+        flex-direction: column;
+
+        @include responsive(md) { //this is 992px;
+            padding: 4rem 0;
+        }
+    }
+
+    &__display {
+        flex: 0 0 50%;
+        position: relative;
+        z-index: 1;
+
+        &-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+
+            @include responsive(md) { //this is 992px;
+                position: relative;
+                display: block;
+            }
+        }
+    }
+
+    &__tv-wrap {
+        position: absolute;
+        top: 10%;
+        left: 10%;
+        right: 10%;
+
+        @include responsive(md) { //this is 992px;
+            top: 1rem;
+            left: 20%;
+            right: 20%;
+        }
+
+        @include responsive(xs) { //this is 576px;
+            left: 15%;
+            right: 15%;
+        }
+    }
+
+    &__tv {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &__tv-placeholder {
+        position: absolute;
+        top: 15%;
+        left: 13%;
+        right: 13%;
+        bottom: 15%;
+
+        @include responsive(md) { //this is 992px;
+            top: 7%;
+            left: 22%;
+            right: 22%;
+            bottom: 26%;
+        }
+
+        @include responsive(xs) { //this is 576px;
+            left: 17%;
+            right: 17%;
+            bottom: 12%;
+        }
+    }
+
+    &__tv-img {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+    }
+
+    &__video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: relative;
+        z-index: 1;
+    }
+
+    &__triangle {
+        border: 19vw solid #fff;
+        border-top: 19vw solid transparent;
+        border-left: 19vw solid transparent;
+        position: absolute;
+        right: 0;
+        top: -10vw;
+
+        @include responsive(md) { //this is 992px;
+            border: 25vw solid #fff;
+            border-top: 25vw solid transparent;
+            border-left: 25vw solid transparent;
+        }
+
+        @include responsive(sm) { //this is 768px;
+            display: none;
+        }
+    }
+
+    &__triangle-line--1 {
+        background-color: $color-secondary;
+        position: absolute;
+        width: 40vw;
+        height: 1px;
+        top: -10vw;
+        right: 0;
+        transform: rotate(-45deg);
+        transform-origin: right;
+
+        @include responsive(sm) { //this is 768px;
+            display: none;
+        }
+    }
+
+    &__triangle-line--2 {
+        background-color: $color-secondary;
+        position: absolute;
+        width: 10vw;
+        height: 1px;
+        top: -9vw;
+        right: 0;
+        transform: rotate(-45deg);
+        transform-origin: right;
+
+        @include responsive(sm) { //this is 768px;
+            display: none;
+        }
+    }
+}
+
+.type {
+    background-color: $color-secondary;
+    background-image: linear-gradient(60deg, transparent 0%, transparent 50%, $color-primary 50%), url('../img/banner_four_left.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    display: flex;
+
+    @include responsive(md) { //this is 992px;
+        flex-direction: column;
+        background-image: none;
+    }
+
+    @include responsive(sm) { //this is 768px;
+
+    }
+
+    @include responsive(xs) { //this is 576px;
+
+    }
+
+    &__buyer {
+        padding: 10rem 5rem;
+        flex: 0 0 50%;
+
+        display: flex;
+        flex-direction: column;
+
+        &-text {
+            font-size: 2.4rem;
+            color: $color-secondary;
+            letter-spacing: 1;
+            width: 80%;
+        }
+
+        @include responsive(md) { //this is 992px;
+            background-image: url('../img/banner_four_left.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+
+        @include responsive(xs) { //this is 576px;
+            padding: 2rem;
+        }
+    }
+
+    &__seller {
+        padding: 10rem 5rem;
+        flex: 0 0 50%;
+
+        display: flex;
+        align-items: flex-end;
+        flex-direction: column;
+
+        &-text {
+            font-size: 2.4rem;
+            color: #fff;
+            letter-spacing: 1;
+            width: 80%;
+        }
+
+        @include responsive(xs) { //this is 576px;
+            padding: 2rem;
+        }
+    }
+}
+
+.our-team {
+    padding: 2rem 0;
+
+    &__heading {
+        max-width: 120rem;
+        margin: 0 auto;
+        margin-bottom: 3rem;
+        padding: 0 1rem;
+    }
+
+    &__content {
+        max-width: 120rem;
+        margin: 0 auto;
+
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+        flex-wrap: wrap;
+    }
+}
+
+.stats-section {
+    background-image: url('../img/h_banner_6.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 5rem 0;
+
+    &__img {
+        display: block;
+        margin: 0 auto;
+    }
+
+    &__showcase {
+        font-size: 3rem;
+        font-weight: 700;
+        text-transform: capitalize;
+        text-align: center;
+        color: #fff;
+    }
+}
+
+.location-section {
+    padding: 5rem 0;
+    background-color: #fff;
+}
+
+.agent-section {
+
+    padding: 10rem 0;
+    padding-top: 5rem;
+
+    &__title {
+        font-size: 2.6rem;
+        color: $color-secondary;
+        text-align: center;
+        text-transform: uppercase;
+    }
+}
+
+.contact-h {
+    background-image: url('../img/h_nine_bg.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    &__content {
+        padding: 6rem 0;
+        max-width: 100rem;
+        margin: 0 auto;
+    }
+}

@@ -1,0 +1,88 @@
+.header {
+    min-height: 100vh;
+    background-image: url('../img/banner-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    line-height: 1.4;
+    position: relative;
+
+    // border: 1px solid red;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    &__triangle--1 {
+        border: 40vh solid $color-trans-blue;
+        border-right: 40vh solid transparent;
+        border-bottom: 40vh solid transparent;
+        position: absolute;
+        top: 0;
+        left: 0;
+    
+        @include responsive(md) { //this is 992px;
+            border: 30vh solid $color-trans-blue;
+            border-right: 30vh solid transparent;
+            border-bottom: 30vh solid transparent;
+        }
+
+        @include responsive(sm) { //this is 576px;
+            border: 25vh solid $color-trans-blue;
+            border-right: 25vh solid transparent;
+            border-bottom: 25vh solid transparent;
+        }
+
+        @include responsive(xs) { //this is 576px;
+            border: 20vh solid $color-trans-blue;
+            border-right: 20vh solid transparent;
+            border-bottom: 20vh solid transparent;
+        }
+    }
+
+    &__line--1 {
+        background-color: $color-trans-blue;
+        min-width: 60vh;
+        min-height: 1px;
+        position: absolute;
+        top: 82vh;
+        left: 0;
+        transform: rotate(-45deg);
+        transform-origin: left;
+
+        @include responsive(md) { //this is 992px;
+            top: 62vh;
+        }
+
+        @include responsive(sm) { //this is 576px;
+            top: 52vh;
+            min-width: 50vh;
+        }
+
+        @include responsive(xs) { //this is 576px;
+            top: 42vh;
+            min-width: 40vh;
+        }
+    }
+
+    &__triangle--2 {
+        border: 18vh solid $color-primary;
+        border-top: 18vh solid transparent;
+        border-left: 18vh solid transparent;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+
+    &__line--2 {
+        background-color: $color-primary;
+        min-width: 50vh;
+        min-height: 1px;
+        position: absolute;
+        bottom: 38vh;
+        right: 0;
+        transform: rotate(-45deg);
+        transform-origin: right;
+    }
+}

@@ -1,0 +1,182 @@
+.btn-lg {
+
+    display: inline-block;
+    font-size: 2rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2px;
+    padding: 1.5rem 4.5rem;
+    white-space: nowrap;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+
+    &:focus {
+        outline: none;
+    }
+
+    &:link,
+    &:visited {
+        display: inline-block;
+        font-size: 2rem;
+        text-transform: uppercase;
+        text-decoration: none;
+        letter-spacing: 2px;
+        padding: 1.5rem 4.5rem;
+        white-space: nowrap;
+    }
+
+    &--white {
+        color: #fff;
+        background-color: $color-trans-black;
+        border: 2px solid #fff;
+        transition: all .5s;
+
+        &:hover {
+            background-color: $color-secondary;
+        }
+    }
+
+    &:not(:last-child) {
+        margin-right: 2rem;
+    }
+}
+
+.btn-sm {
+    display: inline-block;
+    font-size: 1.4rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: .8rem 5rem;
+    white-space: nowrap;
+    cursor: pointer;
+
+    &:focus {
+        outline: none;
+    }
+
+    &:link,
+    &:visited {
+        display: inline-block;
+        font-size: 1.4rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: .8rem 5rem;
+        white-space: nowrap;
+    }
+
+    &--blue {
+        color: $color-secondary;
+        background-color: transparent;
+        border: 2px solid $color-secondary;
+        transition: all .3s;
+
+        &:hover {
+            color: #fff;
+            background-color: $color-secondary;
+        }
+    }
+
+    &--white {
+        color: $color-secondary;
+        background-color: #fff;
+        border: 2px solid #fff;
+        transition: all .3s;
+
+        &:hover {
+            color: $color-secondary;
+            background-color: transparent;
+            border: 2px solid $color-secondary;
+        }
+    }
+
+    &--blue-2 {
+        color: #fff;
+        background-color: $color-secondary;
+        border: 2px solid $color-secondary;
+        transition: all .3s;
+
+        &:hover {
+            color: $color-secondary;
+            background-color: #fff;
+        }
+    }
+
+    &--white-2 {
+        color: $color-secondary;
+        background-color: #fff;
+        border: 2px solid $color-secondary;
+        transition: all .3s;
+
+        &:hover {
+            color: #fff;
+            background-color: $color-secondary;
+            border: 2px solid $color-secondary;
+        }
+    }
+}
+
+.btn-special {
+    border: none;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    background-color: $color-primary;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+    transition: all .3s;
+    transform: perspective(80rem);
+    transform-style: preserve-3d;
+    transform-origin: center;
+
+    &:focus {
+        outline: none;
+    }
+
+    &:hover {
+        transform: perspective(40rem) rotateX(20deg);
+    }
+
+    &:after {
+        content: '';
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: $color-secondary;
+        transform: rotateX(-90deg);
+        transform-origin: top;
+    }
+
+    &:last-child {
+        margin-left: 2rem;
+    }
+
+    &--sm {
+        font-size: 1.8rem;
+        font-weight: 500;
+        padding: .8rem 1.5rem;
+    }
+
+    &--lg {
+        font-size: 2.4rem;
+        padding: 1rem 2rem;
+
+        @include responsive(md) { //this is 992px;
+            font-size: 2rem;
+        }
+
+        @include responsive(sm) { //this is 768px;
+            font-size: 1.8rem;
+        }
+
+        @include responsive(xs) { //this is 576px;
+            font-size: 1.4rem;
+        }
+    }
+}

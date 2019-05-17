@@ -1,0 +1,36 @@
+/*
+MEDIA QUERY FOR RESPONSIVE
+
+0 - 600px:       Phone
+600 - 900px:     Tablet portrait
+900 - 1200px:    Table landscape
+1200 - 1800:     Normal styles for desktop
+1800px+          Big desktops
+
+Breakpoint argument choices:
+xs, sm, md, lg, xl
+
+ORDER: Base > Typography > General layout (header, footer, nav other stuff) > Grid > Page layout > Components
+
+1em = 16px default browser.
+
+only screen means that responsive will not apply when the page is printed.
+*/
+
+@mixin responsive($breakpoint){
+    @if $breakpoint == xs { //576px downward
+        @media only screen and (max-width: 36em) { @content }; //this is 576px;
+    }
+    @if $breakpoint == sm { //768px downward
+        @media only screen and (max-width: 48em) { @content }; //this is 768px;
+    }
+    @if $breakpoint == md { //992px downward
+        @media only screen and (max-width: 62em) { @content }; //this is 992px;
+    }
+    @if $breakpoint == lg { //1200px downward
+        @media only screen and (max-width: 75em) { @content }; //this is 1200px;
+    }
+    @if $breakpoint == xl { //1200px upward
+        @media only screen and (min-width: 75em) { @content }; //this is 1200px+;
+    }
+}

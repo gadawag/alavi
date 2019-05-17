@@ -1,0 +1,37 @@
+// ----------------------------
+// My default base
+// ----------------------------
+
+html {
+    font-size: 62.5%; // Equal to 10px;
+
+    @include responsive(xl) { //this is 1200px > ;
+        
+    }
+
+    @include responsive(lg) { //this is 1200px < ;
+       
+    }
+
+    @include responsive(md) { //this is 992px;
+        font-size: 56.25%;
+    }
+
+    @include responsive(sm) { //this is 768px;
+        font-size: 50%;
+    }
+
+    @include responsive(xs) { //this is 576px;
+        font-size: 43.75%;
+    }
+}
+
+body {
+    box-sizing: border-box; // To make the margin + padding equal to the given width or size of all element (inherit by *).
+}
+
+*, *:before, *:after {
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+}

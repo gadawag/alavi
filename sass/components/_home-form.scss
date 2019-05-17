@@ -1,0 +1,58 @@
+.home-form {
+    
+    display: flex;
+    flex-wrap: wrap;
+
+    &__group {
+        padding: 1rem;
+        position: relative;
+
+        &--50 {
+            flex: 0 0 50%;
+        }
+
+        &--100 {
+            flex: 0 0 100%;
+        }
+    }
+
+    &__label-wr {
+        overflow: hidden;
+        position: absolute;
+        top: 1.8rem;
+        left: 2.5rem;
+    }
+
+    &__label {
+        font-size: 1.4rem;
+        font-weight: 600;
+        color: $color-secondary;
+        display: block;
+        transition: transform .2s;
+        cursor: auto;
+    }
+
+    &__text, &__textarea {
+        font-size: 1.4rem;
+        font-family: inherit;
+        font-weight: 600;
+        color: $color-secondary;
+        background-color: $color-gray-1;
+        border: $gray-border;
+        width: 100%;
+        padding: 1rem 1.5rem;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    &__hide-label {
+        transform: translateX(-100%);
+    }
+
+    &__textarea {
+        resize: none;
+    }
+    
+}
